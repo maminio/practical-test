@@ -52,6 +52,10 @@ export class TasksService {
     }
   }
 
+  async deleteAllTasks(): Promise<void> {
+    return Promise.resolve();
+  }
+
   async updateTaskStatus(
     id: number,
     status: TaskStatus,

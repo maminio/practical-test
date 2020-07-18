@@ -7,9 +7,9 @@ FROM node:${NODE_VERSION}-alpine
 WORKDIR "/app"
 
 COPY ./package.json ./
-COPY ./yarn.lock ./
 COPY ./ ./
-RUN yarn install
+
+RUN npm install
 
 
 
