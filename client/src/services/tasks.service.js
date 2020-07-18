@@ -21,6 +21,10 @@ export default class TasksService extends BaseHttpService {
     await this.delete(`tasks/${id}`);
   }
 
+  async deleteAllTasks(id) {
+    await this.delete(`tasks/all`);
+  }
+
   updateTaskStatus(id, status) {
     return this.patch(`tasks/${id}/status`, { status });
   }

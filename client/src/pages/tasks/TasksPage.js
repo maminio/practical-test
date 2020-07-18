@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import { Fab, IconButton } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
+import DeleteIcon from '@material-ui/icons/Delete';
+
 import SignOutIcon from '@material-ui/icons/ExitToApp'
 import styled from 'styled-components';
 import Task from '../../components/Task';
@@ -83,6 +85,13 @@ class TasksPage extends Component {
     ));
   };
 
+  handleDeleteTask = async () => {
+    const { tasksStore } = this.props;
+    tasksStore.deleteAllTasks();
+    // @TODO
+  };
+
+
   render() {
     return (
       <TasksWrapper>
@@ -98,6 +107,13 @@ class TasksPage extends Component {
               Create Task
             </Fab>
 
+            <Fab
+              variant="extended"
+              onClick={() => this.handleDeleteTask()}
+            >
+              <DeleteIcon />
+              Delete All Tasks
+            </Fab>
             <SignOutIconContainer>
               <IconButton onClick={this.handleSignOut}>
                 <SignOutIcon className="signOutIcon" />

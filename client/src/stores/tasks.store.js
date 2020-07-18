@@ -44,6 +44,14 @@ export default class TasksStore {
     this.tasks.splice(idx, 1);
   }
 
+
+
+  @action
+  async deleteAllTasks() {
+    await this.tasksService.deleteAllTasks();
+    this.tasks = [];
+  }
+
   @action
   async updateTaskStatus(id, status) {
     const task = this.tasks.find(task => task.id === id);
