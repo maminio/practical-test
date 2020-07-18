@@ -1,7 +1,7 @@
 # Practical Test
 > This is a hands-on practical test design to challenge participants on their debugging skills.  
 
-**As a wise man once said, a good developer is a better debugger. **
+**As a wise man once said, a good developer is a better debugger.**
 
 ## Introduction 
 This is a simple TaskManager application built using `NestJS`, `Postgres` and `React`. The project is using `Nginx` as a proxy service. 
