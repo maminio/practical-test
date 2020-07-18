@@ -6,12 +6,12 @@ FROM node:${NODE_VERSION}-alpine
 
 WORKDIR "/app"
 
-COPY ./server/package.json ./
-COPY ./server/yarn.lock ./
-COPY ./server ./
+COPY ./package.json ./
+COPY ./yarn.lock ./
+COPY ./ ./
 RUN yarn install
 
 
 
-CMD ["yarn", "debug"]
+CMD ["yarn", "start:dev"]
 EXPOSE 9229
