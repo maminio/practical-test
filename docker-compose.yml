@@ -72,7 +72,7 @@ services:
 
   postgres:
     # this image should match the major/minor version we use in prod!
-    image: postgres:latest
+    image: postgres:10.12-alpine
     ports:
       - "5435:5435"
     environment:
